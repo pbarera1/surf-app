@@ -1,0 +1,70 @@
+.swell {
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+	background-color: #fff;
+	color: #444;
+	border-radius: 8px;
+	transition: 0.3s;
+	font-size: 16px;
+	display: flex;
+	grid-area: swell;
+}
+
+.swell:hover {
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.swell__visual {
+	background-image: url(../../images/surfer-silhouette.svg);
+	background-repeat: no-repeat;
+	background-position: 50%;
+	min-width: 50%;
+	display: flex;
+	flex-flow: column;
+	justify-content: flex-end;
+	border-right: 1px dotted rgba(64, 164, 223, .6);
+}
+
+.swell__wave-height {
+	background-color: rgba(0,0,0,.2);
+	position: relative;
+	align-self: flex-end;
+	width: 100%;
+	background-color: rgba(64, 164, 223, .6);
+}
+
+.swell__wave-height::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: -10px;
+	right: 0;
+	background-repeat: repeat;
+	height: 10px;
+	background-size: 20px 20px;
+	background-image: radial-gradient(circle at 10px -5px, transparent 12px, rgba(64, 164, 223, .6) 13px);
+}
+
+
+.swell__desc {
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	text-align: center;
+	padding: 16px;
+}
+
+.swell__title {
+	font-weight: bold;
+	font-size: 14px;
+}
+
+.swell__text {
+	padding: 4px 0 24px;
+	color: #1CD8D2;
+	font-size: 20px;
+	font-weight: normal;
+}
+
+.swell__text--large {
+	font-size: 52px;
+}
