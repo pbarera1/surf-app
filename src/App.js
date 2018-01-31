@@ -47,7 +47,7 @@ class App extends Component {
 	}
 
 	callSwellApi = async () => {
-		const data = await fetch('http://localhost:5000/surf');
+		const data = await fetch('/surf');
 		let body = await data.text();
 
 		body = body.split(/\s+/);
