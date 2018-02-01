@@ -6,3 +6,8 @@ A react app that pulls current NOAA buoy data and combines it with OpenWeatherAp
 2. `cd surf-app`
 3. `npm install`
 4. `npm run dev`
+
+## Possible Additions
+- Use geolocation API to send to best page
+- routes for cities, grab closest to buoy lat/long
+- Xml station list into mongo
