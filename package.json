@@ -1,5 +1,6 @@
 {
   "name": "surf-app",
+  "main": "server.js",
   "version": "0.1.0",
   "private": true,
   "proxy": "http://localhost:5000/",
@@ -10,7 +11,7 @@
   },
   "devDependencies": {
     "concurrently": "^3.5.1",
-    "react-scripts": "1.0.17",
+    "react-scripts": "^1.0.17",
     "request": "^2.83.0"
   },
   "scripts": {
