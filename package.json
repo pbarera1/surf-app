@@ -3,8 +3,8 @@
   "main": "server.js",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://localhost:5000/",
   "dependencies": {
+    "express": "^4.16.2",
     "puppeteer": "^1.0.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0"
@@ -15,12 +15,10 @@
     "request": "^2.83.0"
   },
   "scripts": {
-    "cra": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "api": "node --inspect server.js",
-    "dev": "concurrently --kill-others \"npm run start\" \"npm run api\"",
+    "dev": "concurrently --kill-others \"react-scripts start\" \"npm run start\"",
     "start": "node server.js"
   }
 }
