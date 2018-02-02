@@ -1,6 +1,7 @@
 const getDayOfWeek = (daysInFuture) => {
 	const today = new Date().getDay();
 	let day = today + daysInFuture;
+
 	switch (day) {
 		case 1:
 		day = "Monday";
@@ -22,6 +23,16 @@ const getDayOfWeek = (daysInFuture) => {
 		break;
 		case 7:
 		day = "Sunday";
+		break;
+		case 8:
+		day = "Monday";
+		break;
+		case 9:
+		day = "Tuesday";
+		break;
+		case 10:
+		day = "Wenesday";
+		break;
 	}
 	if (!daysInFuture) {
 		return 'Today';
