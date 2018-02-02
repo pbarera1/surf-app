@@ -46,7 +46,7 @@ class App extends Component {
 		})
 	}
 
-	callSwellApi = async () => {
+	callSwellApi = async() => {
 		const data = await fetch('/surf');
 		let body = await data.text();
 
@@ -67,7 +67,7 @@ class App extends Component {
 
 		if (data.status !== 200) throw Error(body.message);
 		return result;
-	};
+	}
 
 	render() {
 

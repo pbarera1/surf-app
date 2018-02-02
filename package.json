@@ -15,11 +15,12 @@
     "request": "^2.83.0"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "cra": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "api": "node --inspect server.js",
-    "dev": "concurrently --kill-others \"npm run start\" \"npm run api\""
+    "dev": "concurrently --kill-others \"npm run start\" \"npm run api\"",
+    "start": "node server.js"
   }
 }
