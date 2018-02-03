@@ -34,9 +34,9 @@ app.get('/api/hello', (req, res) => {
   res.send({ express: 'Hello From Express' });
 });
 
-app.get('/*', (req, res) => {
-	console.log('got');
-	res.sendFile(path.join(__dirname, 'build/index.html'));
-})
+// app.get('/*', (req, res) => {
+// 	console.log('got');
+// 	res.sendFile(path.join(__dirname, 'build/index.html'));
+// })
 
 app.listen(port, () => console.log(`Listening on port ${port}`));
