@@ -50,7 +50,7 @@ class App extends Component {
 	}
 
 	callSwellApi = async() => {
-		const data = await fetch('/surf');
+		const data = await fetch('/api/surf');
 		let body = await data.text();
 
 		body = body.split(/\s+/);

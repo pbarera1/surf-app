@@ -14,7 +14,7 @@ app.use(function(req, res, next) {
 
 app.use(express.static(__dirname + '/build'));
 
-app.get('/surf', (req, res) => {
+app.get('/api/surf', (req, res) => {
 	// using the mission beach buoy
 
 	request('http://www.ndbc.noaa.gov/data/realtime2/46258.txt', function (error, response, body) {
@@ -24,10 +24,10 @@ app.get('/surf', (req, res) => {
 	});
 });
 
-app.get('/advisory', (req, res) => {
-	// is the water safe?
+// app.get('/advisory', (req, res) => {
+// 	// is the water safe?
 
-});
+// });
 
 // api route
 app.get('/api/hello', (req, res) => {
