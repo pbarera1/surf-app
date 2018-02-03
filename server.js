@@ -3,7 +3,7 @@ const request = require('request');
 const path = require('path');
 
 const app = express();
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3001;
 
 // enable cors
 app.use(function(req, res, next) {
@@ -16,6 +16,7 @@ app.use(express.static(path.join(__dirname, 'build')));
 
 app.get('/surf', (req, res) => {
 	// using the mission beach buoy
+
 	request('http://www.ndbc.noaa.gov/data/realtime2/46258.txt', function (error, response, body) {
 			console.log('error:', error); // Print the error if one occurred and handle it
 			console.log('statusCode:', response && response.statusCode); // Print the response status code if a response was received
@@ -33,8 +34,8 @@ app.get('/api/hello', (req, res) => {
   res.send({ express: 'Hello From Express' });
 });
 
-// app.get('/*', (req, res) => {
-// 	res.send(path.join(__dirname, 'build/index.html'));
-// })
+app.get('/*', (req, res) => {
+	res.send(path.join(__dirname, 'build/index.html'));
+})
 
 app.listen(port, () => console.log(`Listening on port ${port}`));

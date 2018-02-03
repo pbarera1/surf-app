@@ -39,6 +39,9 @@ class App extends Component {
 		const res = await this.callSwellApi()
 		const res2 = await this.fetchWeather()
 		const res3 = await this.fetchCurrentWeather()
+
+		console.log('one', res, 'two', res2, 'three', res3);
+
 		this.setState({
 			swellData: res,
 			forecastWeather: res2,
