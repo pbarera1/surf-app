@@ -35,6 +35,7 @@ app.get('/api/hello', (req, res) => {
 });
 
 app.get('/*', (req, res) => {
+	console.log('got');
 	res.sendFile(path.join(__dirname, 'build/index.html'));
 })
 
