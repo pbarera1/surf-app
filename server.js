@@ -12,7 +12,7 @@ app.use(function(req, res, next) {
   next();
 });
 
-app.use(express.static(path.join(__dirname, 'build')));
+app.use(express.static(__dirname + '/build'));
 
 app.get('/surf', (req, res) => {
 	// using the mission beach buoy
@@ -34,9 +34,8 @@ app.get('/api/hello', (req, res) => {
   res.send({ express: 'Hello From Express' });
 });
 
-// app.get('/*', (req, res) => {
-// 	console.log('got');
-// 	res.sendFile(path.join(__dirname, 'build/index.html'));
-// })
+app.get('/*', (req, res) => {
+	res.sendFile(__dirname + '/build/index.html');
+})
 
 app.listen(port, () => console.log(`Listening on port ${port}`));
