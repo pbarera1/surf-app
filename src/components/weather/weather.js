@@ -27,6 +27,9 @@ const Weather = (props) => {
 		if (key == current.weather[0].description) {
 			weatherImg = weatherDesc[key];
 		}
+		if (weatherImg === '' && key === 'mist') {
+			weatherImg = weatherDesc['few clouds'];
+		}
 	});
 
 	return (
