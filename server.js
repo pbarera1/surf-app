@@ -12,7 +12,8 @@ app.use(function(req, res, next) {
   next();
 });
 
-app.use(express.static(__dirname + '/build'));
+// Serve static files from the React app
+app.use(express.static(path.join(__dirname, 'build')));
 
 app.get('/api/surf', (req, res) => {
 	// using the mission beach buoy
@@ -24,18 +25,15 @@ app.get('/api/surf', (req, res) => {
 	});
 });
 
-// app.get('/advisory', (req, res) => {
-// 	// is the water safe?
-
-// });
-
 // api route
 app.get('/api/hello', (req, res) => {
   res.send({ express: 'Hello From Express' });
 });
 
-app.get('/*', (req, res) => {
-	res.sendFile(__dirname + '/build/index.html');
-})
+// The "catchall" handler: for any request that doesn't
+// match one above, send back React's index.html file.
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname + '/build/index.html'));
+});
 
 app.listen(port, () => console.log(`Listening on port ${port}`));
