@@ -31,7 +31,7 @@ const Swell = (props) => {
 			return '1-2 ft. Ankle to Knee High Surf';
 		} else if (swellSize <= 3) {
 			waveCss.flexBasis = '40%';
-			return '2-3 ft Knee to Waits High Surf';
+			return '2-3 ft Knee to Waist High Surf';
 		} else if (swellSize <= 4) {
 			waveCss.flexBasis = '60%';
 			return '3-4 ft Waist to Shoulder High';
