@@ -24,6 +24,6 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "dev": "concurrently --kill-others \"PORT=3001 npm run start\" \"PORT=3000 react-scripts start\"",
-    "start": "node server.js"
+    "start": "react-scripts build && node server.js"
   }
 }
