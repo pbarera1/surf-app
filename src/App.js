@@ -9,7 +9,7 @@ import Wind from './components/wind/wind.js';
 import Weather from './components/weather/weather.js';
 
 const API_KEY = '16ac7780087c57a0f2ee4504a3898e42';
-const ROOT_URL = `http://api.openweathermap.org/data/2.5/forecast?appid=${API_KEY}`;
+const ROOT_URL = `https://api.openweathermap.org/data/2.5/forecast?appid=${API_KEY}`;
 
 class App extends Component {
 	state = {
