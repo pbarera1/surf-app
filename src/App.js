@@ -28,7 +28,7 @@ class App extends Component {
 	}
 
 	fetchCurrentWeather = async() => {
-		const data = await fetch(`http://api.openweathermap.org/data/2.5/weather?appid=${API_KEY}&zip=92109,us&units=imperial`);
+		const data = await fetch(`https://api.openweathermap.org/data/2.5/weather?appid=${API_KEY}&zip=92109,us&units=imperial`);
 		let body = await data.json();
 		console.log(body);
 
